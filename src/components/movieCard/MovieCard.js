@@ -31,7 +31,7 @@ const MovieCard = (props) => {
               <StarIcon sx={{color : '#f5c518'}}/>
               <span>{props.movie.vote_average !== 0 ? parseFloat(props.movie.vote_average).toFixed(1) : 'NA'}</span>
             </div>
-            <Checkbox checked={checked} onChange={handleChange} icon={<StarOutlineIcon color='primary' />} checkedIcon={<StarIcon color='primary'/>} sx={{
+            <Checkbox checked={checked} onChange={handleChange} id={props.movie.id + '_rate'} icon={<StarOutlineIcon color='primary' />} checkedIcon={<StarIcon color='primary'/>} sx={{
               ":hover" : {
                 backgroundColor: '#ffffff21',
                 borderRadius: 2
@@ -43,7 +43,7 @@ const MovieCard = (props) => {
           </Link>
         </div>
       </div>
-      <RatingModal movie={props.movie} setChecked={setChecked} checked={checked} />
+      {checked && <RatingModal movie={props.movie} setChecked={setChecked} checked={checked} />}
     </>
   )
 }

@@ -41,12 +41,12 @@ const SliderContainer = (props) => {
               className='toggle-switch'
               color='info'
             >
-              <ToggleButton value='movie' sx={{
+              <ToggleButton aria-label='movie' value='movie' sx={{
                 px : 1 , py : 0 , color : 'white' , borderRadius : 5 , borderColor : 'white'
               }} >
                 <Typography variant='button' ml={1} mr={1}>Movie</Typography>
               </ToggleButton>
-              <ToggleButton value='tv_show' sx={{
+              <ToggleButton aria-label='tv_show' value='tv_show' sx={{
                 px : 1 , py : 0 , color : 'white' , borderRadius : 5 , borderColor : 'white'
               }}>
                 <Typography variant='button' ml={1} mr={1}>Tv Show</Typography>

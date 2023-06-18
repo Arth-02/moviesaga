@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ratingmodal.css'
 import Rating from '@mui/material/Rating';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
@@ -35,6 +35,10 @@ const RatingModal = (props) => {
         props.setChecked(false);
         setRating(0);
     }
+
+    useEffect(()=> {
+        console.log("modal")
+    },[])
 
     return (
         <>
@@ -76,6 +80,7 @@ const RatingModal = (props) => {
                                 <div className="star-rating">
                                     <Rating 
                                     name="customized-10" 
+                                    id='star-rating'
                                     emptyIcon={<StarOutlineRoundedIcon sx={{ fontSize: 32 }} />} 
                                     icon={<StarRoundedIcon sx={{ fontSize: 32 }} />} 
                                     defaultValue={0} 
@@ -95,7 +100,7 @@ const RatingModal = (props) => {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <Button variant="contained" sx={{ width: '55%' , 
+                                <Button variant="contained" id='rate-btn' sx={{ width: '55%' , 
                                 bgcolor: '#f5c518' ,
                                 ':hover' : {
                                     bgcolor : '#cea613'

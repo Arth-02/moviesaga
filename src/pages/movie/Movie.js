@@ -17,6 +17,8 @@ const Movie = () => {
                 console.log(data);
                 setMovie(data);
             }).catch((error) => console.log(error));
+
+            console.log("Movie useEffect");
         }
         getMovieDetails();
     },[params.id])

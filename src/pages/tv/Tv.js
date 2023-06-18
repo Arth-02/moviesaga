@@ -17,6 +17,8 @@ const Tv = () => {
                 console.log(data);
                 setMovie(data);
             }).catch((error) => console.log(error));
+
+            console.log("Tv useEffect");
         }
         getMovieDetails();
     },[params.id])
@@ -25,11 +27,10 @@ const Tv = () => {
     <>
         {movie && <section className='movie-page'>
             <div className='movie-box' style={{backgroundImage : `url(${image_url + movie.backdrop_path})`}}>
-                <div className='movie-info'>
-                    <div>ABC</div>
-                    <h1>ABC</h1>
-                    <h1>ABC</h1>
-                    <h1>ABC</h1>
+                <div className='background'>
+                    <div className='movie-info'>
+                        <h1>ABC</h1>   
+                    </div>
                 </div>
             </div>
         </section>}

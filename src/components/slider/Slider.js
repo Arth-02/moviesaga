@@ -19,6 +19,7 @@ const Slider = (props) => {
     const getList = async () => {
       await fetch(props.url).then((response) => response.json()).then((data) => {
         setList(data.results);
+        console.log("Slider useEffect");
       })
     }
     getList();
